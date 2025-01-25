@@ -107,7 +107,7 @@ namespace Actividad3
                         break;
 
                 }
-                // while (opcionar != "0") ;
+                
             }
         }
     }
