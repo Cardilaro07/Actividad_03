@@ -39,10 +39,18 @@ namespace Actividad3
                 {
 
                     case "1":
+
                         Console.WriteLine("Por Favor Ingrese Los Valores:");
+                        try 
+                        { 
                         lista = double.Parse(Console.ReadLine());
                         Listanumeros.Add(lista);
                         Console.WriteLine("Agregado: " + lista);
+                        }
+                        catch(Exception ex)
+                        {
+                            Console.WriteLine(ex.Message);
+                        }
                         Console.ReadKey();
                         break;
                     case "2":
@@ -86,14 +94,35 @@ namespace Actividad3
                         Console.ReadKey();
                         break;
                     case "6":
-
-                        double dividir = Listanumeros[0];
-
-                        foreach (double divi in Listanumeros.Skip(1))
+                        if (Listanumeros.Count == 1)
                         {
-                            dividir /= divi;
+                            Console.WriteLine("La division no se puede realizar porque solo tiene un elemento");
                         }
-                        Console.WriteLine("la division de su lista es: " + dividir);
+                        else
+                        {
+                            double dividir = Listanumeros[0];
+                            foreach (double divi in Listanumeros.Skip(1))
+                            {
+                                if (divi==0 )
+                                {
+                                    Console.WriteLine("Error: No se puede dividir por cero");
+                                }
+                                else
+                                {
+                                    try
+                                    {
+                                        dividir = dividir / divi;
+                                        Console.WriteLine("El resultado de la división es: " + dividir);
+                                    }
+                                    catch (Exception ex)
+                                    {
+
+                                        Console.WriteLine("Error: " + ex.Message);
+                                    }
+                                }
+                            }
+                        }
+
                         Console.ReadKey();
                         break;
                     case "0":
