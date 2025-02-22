@@ -21,7 +21,7 @@ namespace Actividad3
             while (iniciar)
             {
                 Console.Clear();
-                Console.WriteLine("     ************ CALCULADORA **********   ");
+                Console.WriteLine("     ************ CALCULADORA CIENTIFICA **********   ");
                 Console.WriteLine("POR FAVOR SELECCIONE LA OPCION QUE DESEA REALIZAR");
                 Console.WriteLine("1-  INGRESAR NÚMEROS");
                 Console.WriteLine("2-  LISTAR NÚMEROS");
